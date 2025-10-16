@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevBeats - Headphone untuk Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="tugas12.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">DevBeats</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Beranda</a></li>
+        <li><a href="#features">Fitur</a></li>
+        <li><a href="#footer">Kontak</a></li>
+      </ul>
+      <button id="tombol-mode">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Headphone DevBeats</h1>
+        <p>Teman setia codingmu: fokus lebih baik, musik jernih, meeting lancar.</p>
+        <a href="#features" class="cta">Pelajari Lebih Lanjut</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800" alt="DevBeats Headphone">
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <article class="feature">
+        <h3>Noise Cancellation</h3>
+        <p>Hilangkan distraksi dengan teknologi peredam bising terbaik.</p>
+      </article>
+      <article class="feature">
+        <h3>Kualitas Audio Premium</h3>
+        <p>Dengarkan musik lo-fi atau rapat online dengan suara super jernih.</p>
+      </article>
+      <article class="feature">
+        <h3>Desain Nyaman</h3>
+        <p>Dibuat untuk dipakai berjam-jam tanpa terasa berat di kepala.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2025 DevBeats. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const tombol = document.querySelector("#tombol-mode");
+    const body = document.querySelector("body");
+
+    tombol.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      tombol.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>

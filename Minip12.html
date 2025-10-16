@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBeats - Headphone for Developer</title>
+    <link rel="stylesheet" href="Minip12.css" />
+  <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Header -->
+     <header>
+        <nav>
+            <div class="logo">DevBeats</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Fitur</a></li>
+                <li><a href="#footer">Kontak</a></li>
+            </ul>
+            <button id="tombol-mode"><i>darkmode</i></button>
+        </nav>
+     </header>
+    <!-- Hero Section -->
+     <main>
+        <section id="hero" class="hero">
+            <div class="hero-text">
+                <h1>Headphone DevBeats</h1>
+                <p>Maximum focus for coding, clear lo-fi music, and smooth online meetings.</p>
+                <a href="#features" class="cta-button">Lihat Fitur</a>
+            </div>
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800" alt="DevBeats Headphone">
+            </div>
+        </section>
+        <!-- Features Section -->
+         <section id="features" class="features">
+            <article class="features-box">
+                <h2>🎧 Noise Cancellation</h2>
+                <p>Block out surrounding noise, so you can stay focused on the code.</p>
+            </article>
+            <article class="features-box">
+                <h2>🎶 Clear Voice</h2>
+                <p>Designed for lo-fi or soft listening music to make studying more relaxing.</p>
+            </article>
+            <article class="features-box">
+                <h2>🎤 High-Quality Microphone</h2>
+                <p>Suitable for daily online stand-up meetings or virtual classes.</p>
+            </article>
+         </section>
+     </main>
+
+     <!-- Footer -->
+     <footer id="footer">
+        <p>&copy; 2025 DevBeats. All Rights Reserved.</p>
+     </footer> 
+
+     <!-- JavaScript -->
+     <script>
+         const tombol = document.querySelector("#tombol-mode");
+         const body = document.querySelector("body");
+     
+         tombol.addEventListener("click", () => {
+             body.classList.toggle("dark-mode");
+             tombol.textContent = body.classList.contains("dark-mode") ? "lightmode" : "darkmode";
+         });
+     </script> 
+</body>
+</html>
