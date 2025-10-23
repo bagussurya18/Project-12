@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Guestbook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bukutamu.css') }}" />
+    <link rel="stylesheet" href="../static/css/bukutamu.css">
+</head>
+<body>
+     <h1>Buku Tamu Digital</h1>
+
+    <form method="POST" action="">
+        <input type="text" name="nama" placeholder="Nama Anda" required>
+        <textarea name="pesan" placeholder="Tulis kesan dan pesan Anda..." rows="4" required></textarea>
+        <button type="submit">Kirim</button>
+    </form>
+
+    <h2 style="text-align:center; margin-top:30px;">Pesan yang Masuk</h2>
+
+    {% if semua_pesan %}
+        {% for pesan in semua_pesan|reverse %}
+        <div class="pesan">
+            <div class="nama">{{ pesan.nama }}</div>
+            <p>{{ pesan.pesan }}</p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p style="text-align:center;">Belum ada pesan. Jadilah yang pertama!</p>
+    {% endif %}
+    
+</body>
+</html>
